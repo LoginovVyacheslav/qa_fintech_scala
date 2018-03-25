@@ -1,10 +1,10 @@
 import org.scalatest.FlatSpec
+import personConvertor.Convertor
+import person.Person
 
 class MapToPersonSpec extends FlatSpec {
 
-  case class Person(name: String, age: Int, phone: String)
-
-  val testedFunc: Map[Int, (String, Int, String)] => List[Person] = ???
+  val testedFunc: Map[Int, (String, Int, String)] => List[Person] = Convertor.convert
 
   val data = Map(
     1 -> ("Alex", 26, "+70001112233"),
